@@ -1,0 +1,78 @@
+<ion-content color="light">
+  <ion-grid fixed>
+    <ion-row class="align-items-center">
+      <ion-col size="12">
+        <form [formGroup]="form">
+
+          <ion-item color="light">
+            <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
+          </ion-item>
+
+          <ion-item color="light" lines="none" class="error"
+            *ngIf="(form.get('email').hasError('required') || form.get('email').hasError('pattern')) && form.get('email').touched">
+            <small>
+              <ion-icon name="alert"></ion-icon>
+              <span>Enter a valid email</span>
+            </small>
+          </ion-item>
+
+          <ion-item color="light">
+            <ion-input type="text" formControlName="password" type={{type}} placeholder="Password" icon=""></ion-input>
+            <ion-icon *ngIf="passwordShowed" name="eye" (click)="displayPassword()"> </ion-icon>
+            <ion-icon *ngIf="passwordHidden" name="ios-eye-off" (click)="hidePassword()"> </ion-icon>
+          </ion-item>
+
+          <ion-item color="light" lines="none" class="error"
+            *ngIf="(form.get('password').hasError('required') || form.get('password').hasError(minlength)) && form.get('password').touched">
+            <small>
+              <ion-icon name="alert"></ion-icon>
+              <span > Password is required</span>
+            </small>
+          </ion-item>
+
+        </form>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="full" (click)="logForm()"
+          [disabled]="form.get('email').hasError('required') || form.get('password').hasError('required')">
+          <span>LOG IN</span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center ion-margin">
+
+      <ion-col size="6">
+        <ion-button color="light">
+          <span class="login-forgot-password">FORGOT PASSWORD?</span>
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="ion-text-center">
+      <ion-col size="12">
+        <ion-text color="primary">
+          <span>Or</span>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-button expand="block" color="primary" class="ion-margin-bottom">
+      <span>LOG IN WITH FACEBOOK</span>
+    </ion-button>
+
+    <ion-button expand="block" color="danger" class="ion-margin-bottom">
+      <span>LOG IN WITH GOOGLE</span>
+    </ion-button>
+
+    <ion-button expand="block" color="secondary" class="ion-margin-bottom">
+      <span> LOG IN WITH TWITTER</span>
+    </ion-button>
+
+
+  </ion-grid>
+</ion-content>

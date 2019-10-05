@@ -1,0 +1,25 @@
+ion-content {
+    transform:translate(0,18%);
+}
+
+.error{
+  margin-left: 0;
+  color: #ff5e5e;
+}
+
+.loading{
+  --background: #ff5e5e;
+  --height: 1500px;
+}
+
+span{
+  font-weight: bold;
+}
+
+.login-forgot-password{
+  color: #c5c5c5;
+}
+
+small{
+  color: #ff5e5e;
+}
