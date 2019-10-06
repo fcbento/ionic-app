@@ -1,23 +1,18 @@
 import { Routes, RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { HomeComponent } from './home.component';
+import { ProfileComponent } from '../profile/profile.component';
 
 const routes: Routes = [
     {
         path: 'home',
         component: HomeComponent,
-        // children: [
-        //     {
-        //         path: 'home',
-        //         children: [
-        //             {
-        //                 path: '',
-        //                // loadChildren: () =>
-        //                     //import('./login/login.module').then(m => m.LoginModule)
-        //             }
-        //         ]
-        //     },
-        // ]
+        children: [
+            {
+                path: 'profile',
+                component: ProfileComponent    
+            },
+        ]
     }
 ];
 
