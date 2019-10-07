@@ -4,12 +4,10 @@ import { IonicModule } from '@ionic/angular';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home.routing.module';
-import { ProfileComponent } from '../profile/profile.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    ProfileComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,

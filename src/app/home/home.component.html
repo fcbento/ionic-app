@@ -23,14 +23,14 @@
         <ion-label>Home</ion-label>
       </ion-item>
 
-      <ion-item routerLink="profile">
-        <ion-icon routerLink="profile" name="person" slot="start"></ion-icon>
-        <ion-label routerLink="profile">Profile</ion-label>
+      <ion-item (click)="navigate('profile')">
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label>Profile</ion-label>
       </ion-item>
 
-      <ion-item>
+      <ion-item (click)="navigate('wall')" >
         <ion-icon name="chatbubbles" slot="start"></ion-icon>
-        <ion-label>Messages</ion-label>
+        <ion-label >Wall</ion-label>
       </ion-item>
 
       <ion-item>
