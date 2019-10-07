@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-end">{{user.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="first" class="my-custom-menu">
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Start Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+
+      <ion-item>
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <ion-item (click)="navigate('profile')">
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-item>
+
+      <ion-item (click)="navigate('wall')" >
+        <ion-icon name="chatbubbles" slot="start"></ion-icon>
+        <ion-label >Wall</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="settings" slot="start"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <ion-item routerLink="profile">
+        <ion-icon routerLink="profile" name="person" slot="start"></ion-icon>
+        <ion-label routerLink="profile">Profile</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="chatbubbles" slot="start"></ion-icon>
+        <ion-label>Messages</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="settings" slot="start"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <ion-item routerLink="profile">
+        <ion-icon routerLink="profile" name="person" slot="start"></ion-icon>
+        <ion-label routerLink="profile">Profile</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="chatbubbles" slot="start"></ion-icon>
+        <ion-label>Messages</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="settings" slot="start"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet main animated=true></ion-router-outlet>
