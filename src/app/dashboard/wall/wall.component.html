@@ -1,9 +1,21 @@
 <ion-grid>
-  <ion-row>
-    <ion-col>
-      <p style="margin-top: 56px;">
-        wall works!
-      </p>
+  <ion-row >
+    <ion-col size="12">
+      <p style="margin-top: 56px;"></p>
+
+      <ion-item>
+        <ion-label position="floating">Compose new post</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+
+      <ion-button (click)="onCreate()">Click me</ion-button>
+
     </ion-col>
   </ion-row>
-</ion-grid>F
+
+  <ion-row>
+    <ion-col>
+        <app-posts></app-posts>
+    </ion-col>
+  </ion-row>
+</ion-grid>

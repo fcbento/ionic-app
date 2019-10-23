@@ -4,10 +4,12 @@ import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WallComponent } from './wall.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
-    WallComponent
+    WallComponent,
+    PostsComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { WallComponent } from './wall.component';
     RouterModule.forChild([{ path: '', component: WallComponent }])
   ],
   exports: [
-    WallComponent
+    WallComponent,
+    PostsComponent
   ]
 })
 export class WallModule { }
